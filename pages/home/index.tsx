@@ -1,5 +1,4 @@
-import { useQuery } from 'react-query';
-import { fetchData } from 'pages/api/getData.api';
+import useGetData from 'pages/home/hooks/useGetData';
 const Home = () => {
   const { data, isLoading, error } = useGetData();
   if (isLoading) return 'Loading...';
@@ -15,10 +14,6 @@ const Home = () => {
       <strong>🍴 {data.forks_count}</strong>
     </div>
   );
-};
-
-const useGetData = () => {
-  return useQuery('test', () => fetchData());
 };
 
 export default Home;
