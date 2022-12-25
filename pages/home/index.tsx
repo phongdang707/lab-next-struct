@@ -1,4 +1,5 @@
-import useGetData from 'pages/home/hooks/useGetData';
+import useGetData from 'hooks/useGetData';
+
 const Home = () => {
   const { data, isLoading, error } = useGetData();
   if (isLoading) return 'Loading...';
